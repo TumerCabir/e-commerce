@@ -1,0 +1,608 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+.nav {
+    height: 70px;
+    width: 100%;
+    box-shadow: 0px 8px 20px;
+    z-index: 99;
+    position: sticky;
+}
+
+.nav .nav-header {
+    display: inline;
+}
+
+.nav .nav-header .nav-title {
+    display: inline-block;
+    font-size: 32px;
+    color: #000000;
+    margin-top: 0.7rem;
+    margin-left: 2%;
+    font-weight: 900;
+}
+
+.nav .nav-btn {
+    display: none;
+}
+
+.nav .nav-links {
+    display: inline;
+    float: right;
+    font-size: 22px;
+    margin-right: 2rem;
+    margin-top: 0.5rem;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+
+
+.nav .nav-links a {
+    display: inline-block;
+    padding: 10px 10px 10px 10px;
+    /*Responsive sıkıntı çıkarıyor*/
+    text-decoration: none;
+    color: #000000;
+    transition: 0.2s;
+}
+
+/* .nav .nav-links a:hover {
+    padding-right: 1px;
+    padding-top: 1px;
+} */
+
+.nav>#nav-check {
+    display: none;
+}
+
+@media (max-width:600px) {
+    .nav .nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+
+    .nav .nav-btn label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+    }
+
+    .nav .nav-btn label:hover,
+    .nav #nav-check:checked~.nav-btn>label {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .nav .nav-btn label span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 2px solid #000000;
+    }
+
+    .nav .nav-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background-color: #070707d8;
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 60px;
+        left: 0px;
+        text-align: end;
+    }
+
+    .nav .nav-links a {
+        display: block;
+        width: 100%;
+        color: aliceblue;
+    }
+
+    .nav #nav-check:not(:checked)~.nav-links {
+        height: 0px;
+    }
+
+    .nav #nav-check:checked~.nav-links {
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+    }
+}
+
+
+
+/*NAVBAR/END*/
+.home-top {
+    position: relative;
+    box-shadow: 0px 5px 10px;
+}
+
+.banner .bannerimg img {
+    height: auto;
+    width: 100%;
+    background-position: cover;
+    position: relative;
+    background-size: cover;
+}
+
+.banner .bannertxt {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+
+}
+
+.banner .bannertxt h1 {
+    font-weight: 800;
+    font-family: sans-serif;
+    font-size: 1.7rem;
+}
+
+.banner .bannertxt p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+.banner .bannertxt .btn {
+    margin-top: 30px;
+}
+
+.banner .bannertxt .btn a {
+    font-weight: 900;
+    color: aliceblue;
+    background-color: #000000;
+    padding: 15px;
+    transition: 0.25s;
+}
+
+.banner .bannertxt .btn a:hover {
+    margin-left: 0.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .banner .bannertxt p {
+        display: none;
+    }
+
+    .banner .bannertxt h1 {
+        font-size: 1.5rem;
+        width: 70%;
+    }
+
+    .banner .bannertxt .btn {
+        margin-top: 20px;
+    }
+
+    .banner .bannertxt .btn a {
+        padding: 10px;
+    }
+}
+
+/*Banner-end*/
+/**Sales*/
+.sales {
+    margin-top: 5em;
+    display: flex;
+    justify-content: space-around;
+}
+
+.sales .sale {
+    width: 30%;
+}
+
+.sales .sale .img h1 {
+    padding-top: 40px;
+    text-align: center;
+    background-color: #d8d8d8;
+    width: 100%;
+    height: 300px;
+    box-shadow: -1px 1px 20px #5c5c5c;
+}
+
+.sales .sale .img h1 {
+    margin-top: 50px;
+}
+
+.sales .sale .about {
+    justify-content: space-between;
+    display: flex;
+}
+
+.sales .sale .about .txt p {
+    margin-top: 15px;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.sales .sale .about .score {
+    color: gray;
+    font-weight: 900;
+    font-size: 40px;
+    margin: 7px;
+}
+
+.sales .sale .about .score span {
+    color: #000000;
+}
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: 900;
+    font-family: sans-serif;
+}
+
+.btns .btn1 a {
+    padding: 10px;
+    color: aliceblue;
+    background-color: brown;
+    box-shadow: -2px 3px 5px rgb(22, 22, 22);
+    transition: 0.3s;
+}
+
+.btns .btn2 a {
+    padding: 8px 30px 8px 30px;
+    color: aliceblue;
+    background-color: brown;
+    box-shadow: 2px 3px 5px rgb(22, 22, 22);
+    transition: 0.3s;
+}
+
+.btns .btn1 a:hover {
+    box-shadow: 0px 0px 0px;
+    background-color: rgb(116, 30, 30);
+}
+
+.btns .btn2 a:hover {
+    box-shadow: 0px 0px 0px;
+    background-color: rgb(116, 30, 30);
+}
+
+@media only screen and (max-width: 915px) {
+    .sales .sale .img h1 {
+        font-size: 1.7rem;
+        height: 180px;
+    }
+
+    .sales .sale .about {
+        justify-content: center;
+    }
+
+    .sales .sale .about .txt p {
+        display: none;
+    }
+
+    .sales .sale .btns {
+        display: block;
+        text-align: center;
+    }
+
+    .sales .sale .btns .btn2 a {
+        padding: 5px 14px 5px 14px;
+        margin-top: 75px;
+    }
+
+    .sales .sale .btns .btn1 a {
+        padding: 5px;
+    }
+}
+
+
+/*Sales-end*/
+/**İtems*/
+.items {
+    margin-top: 20em;
+    display: flex;
+    justify-content: space-around;
+}
+
+.items .item {
+    width: 15%;
+}
+
+.items .item .img h1 {
+    padding-top: 40px;
+    text-align: center;
+    background-color: #d8d8d8;
+    width: 100%;
+    height: 160px;
+    box-shadow: -1px 1px 20px #5c5c5c;
+    font-size: 1.5rem;
+}
+
+.items .item .img h1 {
+    margin-top: 50px;
+}
+
+.items .item .about {
+    justify-content: space-between;
+    display: flex;
+}
+
+.items .item .about .txt p {
+    margin-top: 15px;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.items .item .about .score {
+    color: gray;
+    font-weight: 900;
+    font-size: 40px;
+    margin: 7px;
+}
+
+.items .item .about .score span {
+    color: #000000;
+}
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: 900;
+    font-family: sans-serif;
+}
+
+.btns .btn1 a {
+    padding: 10px;
+    color: aliceblue;
+    background-color: brown;
+    box-shadow: -2px 3px 5px rgb(22, 22, 22);
+    transition: 0.3s;
+}
+
+.btns .btn2 a {
+    padding: 8px 30px 8px 30px;
+    color: aliceblue;
+    background-color: brown;
+    box-shadow: 2px 3px 5px rgb(22, 22, 22);
+    transition: 0.3s;
+}
+
+.btns .btn1 a:hover {
+    box-shadow: 0px 0px 0px;
+    background-color: rgb(116, 30, 30);
+}
+
+.btns .btn2 a:hover {
+    box-shadow: 0px 0px 0px;
+    background-color: rgb(116, 30, 30);
+}
+
+@media only screen and (max-width: 1215px) {
+
+    .items .item .about {
+        justify-content: center;
+    }
+
+    .items .item .about .txt p {
+        display: none;
+    }
+
+    .items .btns {
+        display: block;
+        text-align: center;
+    }
+
+    .items .btns .btn2 a {
+        font-size: 12px;
+        padding: 5px 14px 5px 14px;
+    }
+
+    .items .btns .btn1 a {
+        padding: 5px;
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .items {
+        text-align: center;
+        display: block;
+    }
+
+    .items .item {
+        margin-left: 20%;
+        width: 60%;
+    }
+
+    .items .item .about {
+        justify-content: space-between;
+    }
+
+    .items .item .about .txt p {
+        display: block;
+    }
+
+    .items .item .btns {
+        display: flex;
+    }
+
+    .items .item .img h1 {
+        padding-top: 40px;
+        text-align: center;
+        background-color: #d8d8d8;
+        width: 100%;
+        height: 260px;
+        box-shadow: -1px 1px 20px #5c5c5c;
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .items {
+        text-align: center;
+        display: block;
+    }
+
+    .items .item {
+        margin-left: 5%;
+        width: 90%;
+    }
+
+    .items .item .about {
+        justify-content: space-between;
+    }
+
+    .items .item .about .txt p {
+        display: block;
+    }
+
+    .items .item .btns {
+        display: flex;
+    }
+
+    .items .item .img h1 {
+        padding-top: 40px;
+        text-align: center;
+        background-color: #d8d8d8;
+        width: 100%;
+        height: 260px;
+        box-shadow: -1px 1px 20px #5c5c5c;
+        font-size: 1.5rem;
+    }
+}
+
+
+/*İtems-end*/
+/**Footer*/
+
+.footer {
+    display: flex;
+    margin-top: 20rem;
+    width: 100%;
+    height: 100%;
+    background-color: #1a1919;
+    box-shadow: -1px -5px 10px rgb(119, 119, 119);
+    justify-content: center;
+}
+
+/* .footer .left {
+    width: 50%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 50px;
+    border-right: 1px solid pink;
+}
+
+.footer .left h1 {
+    font-size: 2.4rem;
+    margin-left: 30px;
+    margin-top: 50px;
+    color: white;
+}
+
+.footer .left a {
+    margin-top: 10px;
+    margin-left: 35px;
+    font-weight: 200;
+    font-size: 1rem;
+    color: #7c7c7c;
+}
+
+.footer .left p {
+    margin-top: 15px;
+    margin-left: 35px;
+    font-weight: 900;
+    color: rgb(163, 163, 163);
+} */
+
+.footer .form {
+    display: block;
+    margin-top: 2%;
+    margin-left: 2%;
+    text-align: center;
+    width: 70%;
+}
+
+/* .footer .form h1 {
+    margin-bottom: 20px;
+    font-family: sans-serif;
+} */
+
+.footer .form form {
+    width: 70%;
+    margin-top: 20px;
+    display: block;
+    margin-left: 15%;
+}
+.footer .form form .inp{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.footer .form input {
+    width: 50%;
+    margin: 10px;
+    padding: 10px 0px 00px 10px;
+    font-size: 16px;
+    color: #ffffff56;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+    transition: 0.3s;
+}
+
+.footer .form input:focus{
+    border-bottom: 1px solid #ff0101;
+}
+
+.footer .form textarea {
+    background-color: rgba(128, 128, 128, 0.377);
+    border: 1px solid white;
+    color: #fff;
+    transition: 0.3s;
+    margin: 10px;
+    width: 100%;
+}
+.footer .form textarea:focus{
+    border: 2px solid #070707d8;
+    box-shadow: 0px 0px 20px black;
+    background-color: #a5a5a5;
+}
+.footer .form form button{
+    margin: 10px;
+    margin-top: 10px;
+    width: 100%;
+    height: 40px;
+    font-size: 1.2rem;
+    color: #c4c4c4;
+    background-color: #00000054;
+}
+
+@media only screen and (max-width: 600px) {
+    .footer .form form .inp{
+        display: block;
+    }
+    .footer .form input{
+        width: 100%;
+    }
+}
+
+
+.cr{
+    font-size: 1.3rem;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    background-color: #000000;
+}
+.cr a{
+    color: #636363;
+}
